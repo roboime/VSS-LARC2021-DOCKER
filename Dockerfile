@@ -16,7 +16,7 @@ RUN apt-get install git -y \
 RUN cd /home && mkdir labview-install && cd labview-install \ 
 	&& wget https://download.ni.com/support/softlib/labview/labview_runtime/2020%20SP1/LabVIEW2020SP1RTE_Linux.tgz \
 	&& tar -xvzf LabVIEW2020SP1RTE_Linux.tgz && rm *.i386.rpm && alien *.rpm --scripts && dpkg -i *.deb
-RUN cd /home && git clone https://github.com/roboime/VSS_AI.git && cd VSS_AI && git checkout erreinadefposskill && git pull \
+RUN cd /home && git clone https://github.com/roboime/VSS_AI.git && cd VSS_AI && git checkout main && git pull \
 	&& cd .. && chmod -R 777 VSS_AI
 EXPOSE 20011/udp
 
